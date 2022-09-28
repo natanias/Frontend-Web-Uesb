@@ -7,7 +7,7 @@ export default function User(){
     useEffect(()=>{
         api.get('users').then(response =>{
             setUsers(response.data);
-        })
+        }).catch(err =>console.log(err))
     },[])
 
     return(
